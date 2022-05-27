@@ -243,6 +243,8 @@ const OptionScene = React.forwardRef(({ nextFunc, transSignaler, _geo }, ref) =>
         getRandomAnswerList()
 
     const judgeFunc = (num) => {
+        audioList.buzzAudio.pause();
+        
         if (num == doneCount + correctNum) {
 
             parentObject.current.style.pointerEvents = 'none'
@@ -258,7 +260,10 @@ const OptionScene = React.forwardRef(({ nextFunc, transSignaler, _geo }, ref) =>
 
 
             if (correctNum == answerList.length)
-                goNextStep()
+                setTimeout(() => {
+                    goNextStep()
+                }, 1000);
+
 
             else {
                 audioList.tingAudio.currentTime = 0;
@@ -276,7 +281,7 @@ const OptionScene = React.forwardRef(({ nextFunc, transSignaler, _geo }, ref) =>
                         startRepeatAudio()
                         // audioList.commonAudio1.play();
                     }, audioList.bodyAudio2.duration * 1000 + 300);
-                }, 1500);
+                }, 2000);
             }
         }
         else {
