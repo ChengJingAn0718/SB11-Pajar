@@ -145,7 +145,6 @@ const OptionScene = React.forwardRef(({ nextFunc, transSignaler, _geo }, ref) =>
 
         doneCount += optionGroup[stepCount]
         transSignaler(SIGNALLIST.increaseMark)
-        audioList.clapAudio.play()
         setTimeout(() => {
 
 
@@ -257,7 +256,6 @@ const OptionScene = React.forwardRef(({ nextFunc, transSignaler, _geo }, ref) =>
             clickRefList[num].current.style.top = '47%'
 
             correctNum++
-
 
             if (correctNum == answerList.length)
                 setTimeout(() => {
