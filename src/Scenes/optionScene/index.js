@@ -115,7 +115,7 @@ const OptionScene = React.forwardRef(({ nextFunc, transSignaler, _geo }, ref) =>
 
         audioList.bodyAudio1.pause()
         audioList.bodyAudio2.pause()
-
+        audioList.buzzAudio.pause();
 
         timerList.map(timer => clearTimeout(timer))
 
@@ -243,8 +243,8 @@ const OptionScene = React.forwardRef(({ nextFunc, transSignaler, _geo }, ref) =>
         getRandomAnswerList()
 
     const judgeFunc = (num) => {
-        audioList.buzzAudio.pause();
-        
+      
+
         if (num == doneCount + correctNum) {
 
             parentObject.current.style.pointerEvents = 'none'
