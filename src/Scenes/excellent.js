@@ -2,7 +2,7 @@ import React, { useContext, useRef, useEffect } from 'react';
 import "../stylesheets/styles.css";
 import { UserContext } from "../components/BaseShot"
 import { isIOS } from "react-device-detect";
-import { setExtraVolume, setRepeatAudio, startRepeatAudio, stopRepeatAudio } from "../components/CommonFunctions"
+import { setExtraVolume, setRepeatAudio, startRepeatAudio, stopRepeatAudio, setRepeatType } from "../components/CommonFunctions"
 import { prePathUrl } from "../components/CommonFunctions";
 
 let timerList = []
