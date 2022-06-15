@@ -28,6 +28,13 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, loadFunc }, ref) => {
             parentRef.current.className = 'aniObject'
             spakleRef.current.className = 'excellentText'
 
+            setExtraVolume(audioList.clapAudio, 1.5)
+            setExtraVolume(audioList.yeahAudio, 1.5)
+            setExtraVolume(audioList.tingAudio, 1.5)
+            setExtraVolume(audioList.buzzAudio, 1.5)
+            setExtraVolume(audioList.successAudio, 1.5)
+            
+
             loadFunc();
 
             timerList[0] = setTimeout(() => {

@@ -7,7 +7,7 @@ export const SIGNALLIST = {
 
 const textInfoList = [
     { path: '1a', s: 0.2, l: 0.000, t: -0.065, lm: -47 },
-    { path: '2a', s: 0.2, l: 0.000, t: -0.068, lm: -60, },
+    { path: '2a', s: 0.2, l: 0.000, t: -0.068, lm: -47, },
     { path: '3a', s: 0.2, l: 0.000, t: -0.065, lm: -53 },
     { path: '4a', s: 0.2, l: 0.000, t: -0.067, lm: -45 },
 
@@ -16,10 +16,10 @@ const textInfoList = [
     { path: '3a', s: 0.2, l: 0.000, t: -0.065, lm: -47 },
     { path: '4a', s: 0.2, l: 0.000, t: -0.067, lm: -57 },
 
-    { path: '1a', s: 0.2, l: 0.000, t: -0.065, lm: -60 },
-    { path: '2a', s: 0.2, l: 0.000, t: -0.068, lm: -60, },
-    { path: '3a', s: 0.2, l: 0.000, t: -0.065, lm: -58 },
-    { path: '4a', s: 0.2, l: 0.000, t: -0.067, lm: -59 },
+    { path: '1a', s: 0.2, l: 0.000, t: -0.065, lm: -47 },
+    { path: '2a', s: 0.2, l: 0.000, t: -0.068, lm: -62, },
+    { path: '3a', s: 0.2, l: 0.000, t: -0.065, lm: -62 },
+    { path: '4a', s: 0.2, l: 0.000, t: -0.067, lm: -63 },
 ]
 
 export const iconPrefix = 'SB11_Summery_icon_'
