@@ -38,8 +38,8 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, _geo, loadFunc }, ref) => 
 
     useEffect(() => {
 
-        setRepeatType(1)
-
+        
+        
         return () => {
             stepCount = 0;
             totalStep = 0
@@ -55,9 +55,8 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, _geo, loadFunc }, ref) => 
         sceneStart: () => {
             parentRef.current.className = 'aniObject'
 
-
-            setExtraVolume(audioList.commonAudio2, 2)
-            setExtraVolume(audioList.commonAudio1, 2)
+            setExtraVolume(audioList.commonAudio2, 3)
+            setExtraVolume(audioList.commonAudio1, 3)
 
             startFirstPart()
             loadFunc()
@@ -99,9 +98,16 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, _geo, loadFunc }, ref) => 
 
 
         aniImageList.map((image, index) => {
-            if (index < 3)
+            if (index < 3) {
                 image.current.setUrl('question/' + (stepCount + 2) + '/' + (index + 1) + '.png')
+            }
         })
+
+        if (stepCount == 7)
+            secondPartRef.current.style.top = 0 + 'px';
+        else
+            secondPartRef.current.style.top = _baseGeo.top + 'px';
+
 
 
         timerList[2] = setTimeout(() => {
@@ -213,7 +219,8 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, _geo, loadFunc }, ref) => 
 
         firstPartRef.current.className = 'disapear'
 
-        stepCount = 0
+       
+        
 
         setPrimaryAudio(audioList.bodyAudio1)
         setRepeatAudio(audioList.commonAudio2)
@@ -255,6 +262,7 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, _geo, loadFunc }, ref) => 
     }
 
     const continueSecondPart = () => {
+
         stopRepeatAudio()
         secondPartRef.current.className = 'appear'
         firstPartRef.current.className = 'disapear'
@@ -364,7 +372,6 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, _geo, loadFunc }, ref) => 
                                     background: 'black',
 
                                 }} >
-
                             </div>
 
                             {
