@@ -103,10 +103,10 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, _geo, loadFunc }, ref) => 
             }
         })
 
-        if (stepCount == 7)
-            secondPartRef.current.style.top = 0 + 'px';
-        else
-            secondPartRef.current.style.top = _baseGeo.top + 'px';
+        // if (stepCount == 7)
+        //     secondPartRef.current.style.top = 0 + 'px';
+        // else
+        //     secondPartRef.current.style.top = _baseGeo.top + 'px';
 
 
 
