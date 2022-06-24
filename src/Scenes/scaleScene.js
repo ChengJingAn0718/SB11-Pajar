@@ -102,9 +102,9 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, loadFunc, bgLoaded }, ref)
             currentImage.current.style.transition = '0.5s'
 
 
-            setExtraVolume(audioList.bodyAudio1, 3)
-            setExtraVolume(audioList.bodyAudio2, 3)
-            setExtraVolume(audioList.bodyAudio3, 3)
+            setExtraVolume(audioList.bodyAudio1, 6)
+            setExtraVolume(audioList.bodyAudio2, 6)
+            setExtraVolume(audioList.bodyAudio3, 6)
             
             setTimeout(() => {
                 setLoadSubPart(true)
