@@ -21,19 +21,21 @@ let clickedList = []
 let wordGround = [6, 6]
 
 const posInfoList = [
-    { x: 1, y: 40 },
+    { x: 4, y: 40 },
     { x: 34, y: 40 },
-    { x: 68, y: 40, m: true },
-    { x: 1, y: 70 },
+    { x: 64, y: 40, m: true },
+    
+    { x: 4, y: 70 },
     { x: 34, y: 70 },
-    { x: 68, y: 70, m: true },
+    { x: 64, y: 70, m: true },
 
-    { x: 1, y: 40 },
+    { x: 4, y: 40 },
     { x: 34, y: 40 },
-    { x: 68, y: 40, m: true },
-    { x: 1, y: 70 },
+    { x: 64, y: 40, m: true },
+
+    { x: 4, y: 70 },
     { x: 34, y: 70 },
-    { x: 68, y: 70, m: true },
+    { x: 64, y: 70, m: true },
 ]
 
 let doneCount = 0
@@ -89,10 +91,6 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, _geo }, ref) => {
             setRepeatType(2)
             setExtraVolume(audioList.commonAudio3, 6)
 
-
-
-
-
             audioList.bodyAudio1.src = prePathUrl() + "sounds/main/common/review0.mp3"
             audioList.bodyAudio2.src = prePathUrl() + "sounds/main/common/review1.mp3"
 
@@ -102,7 +100,6 @@ const Scene = React.forwardRef(({ nextFunc, _baseGeo, _geo }, ref) => {
             clickedList = []
 
             setRepeatAudio(audioList.commonAudio3)
-
         },
         sceneEnd: () => {
         }
